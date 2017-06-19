@@ -14,7 +14,8 @@ import LoginForm from '../src/components/LoginForm';
 import LoginAddress from '../src/components/LoginAddress';
 import MainMenu from '../src/components/MainMenu';
 import News from '../src/components/News';
-
+import Profil from '../src/components/Profil';
+import ProfilCompetences from '../src/components/ProfilCompetences';
 
 const materialAbbealTheme = {
     themeName: 'Abbeal Theme',
@@ -152,5 +153,21 @@ storiesOf('News', module)
       <News title={'Le contrôle Urssaf à la Ruche'} author={'Anthony Guyot'}>
         Contenu de la news
       </News>
+    </div>
+);
+
+storiesOf('Profil', module)
+  .addDecorator(muiTheme([materialAbbealTheme]))
+  .add('default', () =>
+    <div>
+      <Profil />
+    </div>
+);
+
+storiesOf('ProfilCompetences', module)
+  .addDecorator(muiTheme([materialAbbealTheme]))
+  .add('default', () =>
+    <div>
+      <ProfilCompetences />
     </div>
 );
