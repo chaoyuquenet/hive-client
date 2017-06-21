@@ -16,6 +16,9 @@ import MainMenu from '../src/components/MainMenu';
 import News from '../src/components/News';
 import Profil from '../src/components/Profil';
 import ProfilCompetences from '../src/components/ProfilCompetences';
+import ProfilMissions from '../src/components/ProfilMissions';
+import Recherche from '../src/components/Recherche';
+import LaRuche from '../src/components/LaRuche';
 
 const materialAbbealTheme = {
     themeName: 'Abbeal Theme',
@@ -139,12 +142,12 @@ storiesOf('LoginWindow', module)
   );
 
 storiesOf('MainMenu', module)
-  .addDecorator(muiTheme([materialAbbealTheme]))
-  .add('default', () =>
-    <div>
-      <MainMenu />
-    </div>
-  );
+    .addDecorator(muiTheme([materialAbbealTheme]))
+    .add('default', () =>
+      <div>
+        <MainMenu />
+      </div>
+);
 
 storiesOf('News', module)
   .addDecorator(muiTheme([materialAbbealTheme]))
@@ -170,4 +173,55 @@ storiesOf('ProfilCompetences', module)
     <div>
       <ProfilCompetences />
     </div>
+);
+
+storiesOf('ProfilWindow', module)
+  .addDecorator(muiTheme([materialAbbealTheme]))
+  .add('default', () =>
+    <div>
+      <HSection
+        height='300px'
+        bgColor='#253338'
+        fgColor='#b2b2b5'
+      >
+        <h1> Anthony Guyot </h1>
+        <p> Développeur Web </p>
+      </HSection>
+      <HSection
+        height='400px'
+        bgColor='#253338'
+        fgColor='#b2b2b5'
+      >
+        0677123539<br/>
+        <a href='anthony.guyot@abbeal.com'>contact@abbeal.com</a><br/>
+        <br/>
+        15 résidence de la Gare<br/>
+        78125-Gazeran<br/>
+      </HSection>
+    </div>
+);
+
+storiesOf('ProfilMissions', module)
+  .addDecorator(muiTheme([materialAbbealTheme]))
+  .add('default', () =>
+    <div>
+      <ProfilMissions />
+    </div>
+);
+
+storiesOf('Recherche', module)
+      .addDecorator(muiTheme([materialAbbealTheme]))
+      .add('default', () =>
+        <div>
+          <Recherche />
+        </div>
+
+);
+
+storiesOf('LaRuche', module)
+    .addDecorator(muiTheme([materialAbbealTheme]))
+    .add('default', () =>
+      <div>
+        <LaRuche />
+      </div>
 );
