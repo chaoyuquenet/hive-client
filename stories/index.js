@@ -18,7 +18,8 @@ import Profil from '../src/components/Profil';
 import ProfilCompetences from '../src/components/ProfilCompetences';
 import ProfilMissions from '../src/components/ProfilMissions';
 import Recherche from '../src/components/Recherche';
-import LaRuche from '../src/components/LaRuche';
+import ProfilPhotos from '../src/components/ProfilPhotos';
+import Administration from '../src/components/Administration';
 
 const materialAbbealTheme = {
     themeName: 'Abbeal Theme',
@@ -85,14 +86,15 @@ storiesOf('HSection', module)
 storiesOf('LoginForm', module)
   .addDecorator(muiTheme([materialAbbealTheme]))
   .add('default', () =>
-    <LoginForm/>);
+    <LoginForm/>
+);
 
 storiesOf('LoginAddress', module)
   .add('default',() =>
     <LoginAddress title='LA RUCHE PARIS'>
     Hello
     </LoginAddress>
-  );
+);
 
 storiesOf('LoginWindow', module)
   .addDecorator(muiTheme([materialAbbealTheme]))
@@ -198,6 +200,7 @@ storiesOf('ProfilWindow', module)
         15 résidence de la Gare<br/>
         78125-Gazeran<br/>
       </HSection>
+
     </div>
 );
 
@@ -218,10 +221,18 @@ storiesOf('Recherche', module)
 
 );
 
-storiesOf('LaRuche', module)
+storiesOf('ProfilPhotos', module)
     .addDecorator(muiTheme([materialAbbealTheme]))
     .add('default', () =>
       <div>
-        <LaRuche />
+        <ProfilPhotos />
+      </div>
+);
+
+storiesOf('Administration', module)
+    .addDecorator(muiTheme([materialAbbealTheme]))
+    .add('default', () =>
+      <div>
+        <Administration />
       </div>
 );

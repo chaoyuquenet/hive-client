@@ -3,7 +3,7 @@ import Paper from 'material-ui/Paper';
 import Divider from 'material-ui/Divider';
 
 
-const LaRuche = () => (
+const ProfilPhotos = () => (
   <div>
     <Paper>
       <div>
@@ -20,4 +20,4 @@ const LaRuche = () => (
   </div>
 );
 
-export default LaRuche;
+export default ProfilPhotos;

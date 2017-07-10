@@ -5,6 +5,18 @@ import './styles/main.scss'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+import ApolloClient from 'apollo-client';
+import { ApolloProvider, createNetworkInterface } from 'react-apollo';
+
+import { Router, hashHistory, Route, IndexRoute } from 'react-router';
+
+const client = new ApolloClient({
+  dataIdFromObject : o => o.id,
+  networkInterface: createNetworkInterface({
+    uri: 'http://127.0.0.1:4000/graphql',
+  }),
+});
+
 // Store Initialization
 // ------------------------------------
 const store = createStore(window.__INITIAL_STATE__)
@@ -19,7 +31,9 @@ let render = () => {
 
   ReactDOM.render(
     <MuiThemeProvider>
-      <App store={store} routes={routes} />
+      <ApolloProvider client={client}>
+        <App store={store} routes={routes} />
+      </ApolloProvider>
     </MuiThemeProvider>,
     MOUNT_NODE
   )

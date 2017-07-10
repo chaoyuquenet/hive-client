@@ -1,18 +1,16 @@
-import React, { Component }from 'react';
+import React from 'react';
+import Paper from 'material-ui/Paper';
 
-export default class ProfilMissions extends Component {
-  render() {
-    const props = this.props;
-
-    const style = {
-      display: 'inline-block',
-    }
-
-    return (
-      <div style={style}>
-        {this.props.title}
-        <p>{this.props.children}</p>
+const ProfilMissions = () => (
+  <div>
+    <Paper>
+      <div>
+      Genymobile<br/>
+      1 rue du Mail-75002<br/>
+      Développeur JavaScript Front<br/>
       </div>
-    );
-  };
-}
+    </Paper>
+  </div>
+);
+
+export default ProfilMissions;
