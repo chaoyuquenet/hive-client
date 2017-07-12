@@ -20,6 +20,7 @@ import ProfilMissions from '../src/components/ProfilMissions';
 import Recherche from '../src/components/Recherche';
 import ProfilPhotos from '../src/components/ProfilPhotos';
 import Administration from '../src/components/Administration';
+import Logo from '../src/components/Logo';
 
 const materialAbbealTheme = {
     themeName: 'Abbeal Theme',
@@ -99,13 +100,13 @@ storiesOf('LoginAddress', module)
 storiesOf('LoginWindow', module)
   .addDecorator(muiTheme([materialAbbealTheme]))
   .add('default', () =>
-    <div>
+    <div style={{margin: '40px'}}>
       <HSection
         height='300px'
         bgColor='#253338'
         fgColor='#b2b2b5'
       >
-        Abbeal
+        <Logo />
       </HSection>
       <HSection
         height='300px'
@@ -122,21 +123,21 @@ storiesOf('LoginWindow', module)
         <LoginAddress title='LA RUCHE PARIS'>
         1 rue du Mail<br/>
         75002 Paris<br/>
-        <a href='mailto:contact@abbeal.com'>contact@abbeal.com</a>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='mailto:contact@abbeal.com'>contact@abbeal.com</a>
         </LoginAddress>
 
         <LoginAddress title='LA RUCHE LYON'>
         La Cordée Charpennes<br/>
         26 rue Henri Rolland<br/>
         69100 Villeurbanne<br/>
-        <a href='mailto:contact@abbeal.com'>contact@abbeal.com</a>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='mailto:contact@abbeal.com'>contact@abbeal.com</a>
         </LoginAddress>
 
         <LoginAddress title='RESEAUX SOCIAUX'>
-        <a href='https://twitter.com/abbealbzzz'>Twitter</a><br/>
-        <a href='https://m.facebook.com/abbealbzzz'>Facebook</a><br/>
-        <a href='https://linkedin.com/company-beta/9269820'>Linkedin</a><br/>
-        <a href='https://viadeo.com/fr/company/abbeal'>Viadéo</a><br/>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='https://twitter.com/abbealbzzz'>Twitter</a><br/>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='https://m.facebook.com/abbealbzzz'>Facebook</a><br/>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='https://linkedin.com/company-beta/9269820'>Linkedin</a><br/>
+        <a style={{textDecoration: 'none', color: '#b2b2b5'}} href='https://viadeo.com/fr/company/abbeal'>Viadéo</a><br/>
         </LoginAddress>
 
       </HSection>

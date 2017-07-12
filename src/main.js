@@ -5,16 +5,19 @@ import './styles/main.scss'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import ApolloClient from 'apollo-client';
-import { ApolloProvider, createNetworkInterface } from 'react-apollo';
+import ApolloClient, { createNetworkInterface } from 'apollo-client';
+import { ApolloProvider } from 'react-apollo';
 
-import { Router, hashHistory, Route, IndexRoute } from 'react-router';
+const networkInterface = createNetworkInterface({
+  uri: 'http://127.0.0.1:4000/graphql',
+  opts: {
+    credentials: 'include',
+  }
+});
 
 const client = new ApolloClient({
   dataIdFromObject : o => o.id,
-  networkInterface: createNetworkInterface({
-    uri: 'http://127.0.0.1:4000/graphql',
-  }),
+  networkInterface,
 });
 
 // Store Initialization

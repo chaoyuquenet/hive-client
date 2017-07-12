@@ -6,6 +6,11 @@ import HSection from 'components/HSection';
 import LoginForm from 'components/LoginForm';
 import LoginAddress from 'components/LoginAddress';
 
+// Needed for onTouchTap
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+
 export const PageLayout = ({ children }) => (
   <div className='container text-center'>
     <HSection
